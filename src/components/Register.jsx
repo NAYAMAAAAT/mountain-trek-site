@@ -28,7 +28,7 @@ const Register = () => {
             })
 
     }
-
+   
     return (
         <div className="hero bg-base-200 min-h-screen">
             <div className="hero-content flex-col">
@@ -61,8 +61,9 @@ const Register = () => {
                         </div>
                     </form>
                     <p className='ml-4 mb-4 mr-4'>
-                        Already have an account? Please <Link to="/login">Login</Link>.
+                        Already have an account? Please <Link to="/login" className='text-blue-500'>Login</Link>.
                     </p>
+                    
                 </div>
             </div>
         </div>

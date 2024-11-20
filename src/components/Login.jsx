@@ -2,6 +2,11 @@ import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from './AuthProvider';
 
+
+
+
+
+
 const Login = () => {
     const navigate = useNavigate();
     const { signInUser, signInWithGoogle } = useContext(AuthContext);
@@ -60,10 +65,10 @@ const Login = () => {
                         </div>
                     </form>
                     <p className='ml-4 mb-4'>
-                        New to this website? please <Link to="/register">Register</Link>
+                        New to this website? please <Link to="/register" className='text-blue-500'>Register</Link>
                     </p>
                     <p>
-                        <button onClick={handleGoogleSignIn} className='btn btn-ghost'>Google</button>
+                        <button onClick={handleGoogleSignIn} className='btn btn-ghost bg-blue-300 ml-16'>Log in with Google</button>
                     </p>
                 </div>
             </div>

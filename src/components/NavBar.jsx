@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from './AuthProvider';
 
 
+
 const NavBar = () => {
 
 
@@ -26,7 +27,7 @@ const NavBar = () => {
   <li><NavLink to="/register">Register</NavLink></li>
   {
       user && <>
-          <li><NavLink to="/orders">Orders</NavLink></li>
+   
           <li><NavLink to="/profile">Profile</NavLink></li>
       </>
   }
