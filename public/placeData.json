@@ -1,0 +1,149 @@
+[
+  {
+    "id": 1,
+    "title": "Winter Wonderland Trek to Annapurna Base Camp",
+    "image": "https://images.unsplash.com/photo-1565369446837-5125915475b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "category": "Mountain Treks",
+    "shortDescription": "Embark on a challenging trek through the Himalayas, witnessing snow-capped mountains, unique cultural encounters, and a serene natural setting.",
+    "adventureCost": 1500,
+    "bookingAvailability": "Limited",
+    "location": "Nepal",
+    "duration": "12 days",
+    "adventureLevel": "Advanced",
+    "includedItems": [
+      "Accommodation",
+      "Meals",
+      "Guide",
+      "Porters",
+      "Safety equipment"
+    ],
+    "ecoFriendlyFeatures": [
+      "Responsible waste management",
+      "Local guide employment",
+      "Community support"
+    ],
+    "maxGroupSize": 10,
+    "specialInstructions": [
+      "Proper acclimatization is essential",
+      "Bring warm clothing and hiking gear"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Trek to Tiger's Nest Monastery: Bhutan's Sacred Jewel in Winter",
+    "image": "https://i.natgeofe.com/n/7a845253-722f-4305-bf0e-73d1be63cc00/bhutan-paro-taktsang-monastery.jpg",
+    "category": "Cultural Treks",
+    "shortDescription": "Embark on a spiritual journey to Tiger's Nest Monastery, a sacred landmark perched on a cliffside in Bhutan, shrouded in the serenity of a winter landscape.",
+    "adventureCost": 1750,
+    "bookingAvailability": "Available",
+    "location": "Bhutan",
+    "duration": "5 days",
+    "adventureLevel": "Intermediate",
+    "includedItems": [
+      "Accommodation in guesthouses or hotels",
+      "Meals",
+      "Licensed guide",
+      "Entrance fees and permits",
+      "Cultural performances and visits"
+    ],
+    "ecoFriendlyFeatures": [
+      "Supporting local communities and businesses",
+      "Promoting responsible tourism practices",
+      "Respect for Bhutan's unique cultural heritage"
+    ],
+    "maxGroupSize": 8,
+    "specialInstructions": [
+      "Obtain a Bhutanese tourist visa in advance",
+      "Prepare for cold temperatures and potential snowfall",
+      "Dress modestly and respect cultural norms"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Mount Fuji Climb in Winter: A Majestic Winter Adventure",
+    "image": "https://cdn.kimkim.com/files/a/content_articles/shared/2020/Feb/Mount_Fuji_Climbing_Season_and_Weather_5f501f20_1200x700.jpg",
+    "category": "Mountain Treks",
+    "shortDescription": "Conquer the iconic Mount Fuji in winter, experiencing stunning snow-covered landscapes and a unique cultural experience.",
+    "adventureCost": 1200,
+    "bookingAvailability": "Limited",
+    "location": "Japan",
+    "duration": "2 days",
+    "adventureLevel": "Intermediate",
+    "includedItems": [
+      "Mountain hut accommodation",
+      "Meals",
+      "Experienced guide",
+      "Climbing permits and fees"
+    ],
+    "ecoFriendlyFeatures": [
+      "Responsible mountain climbing practices",
+      "Preservation of the natural environment",
+      "Support for local communities"
+    ],
+    "maxGroupSize": 10,
+    "specialInstructions": [
+      "Proper physical preparation and acclimatization",
+      "Bring warm clothing and essential mountaineering gear"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Snowshoe Adventures in Hokkaido, Japan: Exploring Winter Wonderland",
+    "image": "https://i.natgeofe.com/n/6fa87d32-a1f5-4280-8122-83d43248b8bf/japan-hokkaido-snowshoeing.jpg",
+    "category": "Winter Sports",
+    "shortDescription": "Explore the pristine winter landscapes of Hokkaido, Japan, by snowshoeing, enjoying breathtaking natural scenery, hot springs, and authentic Japanese cuisine.",
+    "adventureCost": 1900,
+    "bookingAvailability": "Available",
+    "location": "Japan",
+    "duration": "7 days",
+    "adventureLevel": "Beginner to Intermediate",
+    "includedItems": [
+      "Accommodation in traditional ryokan inns or lodges",
+      "Meals",
+      "Guided snowshoeing tours",
+      "Entrance to hot springs",
+      "Cultural experiences and local transportation"
+    ],
+    "ecoFriendlyFeatures": [
+      "Supporting local businesses and communities",
+      "Promoting responsible winter tourism practices",
+      "Minimal impact on the fragile environment"
+    ],
+    "maxGroupSize": 15,
+    "specialInstructions": [
+      "Pack appropriate winter clothing and footwear",
+      "Be prepared for potential snowfall and low temperatures",
+      "Learn basic Japanese phrases to enhance local interactions"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Mount Rinjani Trek: Exploring an Active Volcano in Winter",
+    "image": "https://media.kasperskycontenthub.com/wp-content/uploads/sites/67/2023/10/02113413/11889534_original-900x600.jpg",
+    "category": "Mountain Treks",
+    "shortDescription": "Embark on a volcanic adventure to Mount Rinjani in Lombok, Indonesia, witnessing a unique landscape of volcanic craters, lakes, and panoramic views during winter.",
+    "adventureCost": 1450,
+    "bookingAvailability": "Limited",
+    "location": "Indonesia",
+    "duration": "7 days",
+    "adventureLevel": "Intermediate",
+    "includedItems": [
+      "Accommodation in tents or mountain huts",
+      "Meals",
+      "Licensed guide and porters",
+      "Entrance fees and permits",
+      "Volcanic crater and hot spring visits"
+    ],
+    "ecoFriendlyFeatures": [
+      "Support for local communities and conservation efforts",
+      "Sustainable waste management on the mountain",
+      "Respectful interaction with the local ecosystem"
+    ],
+    "maxGroupSize": 10,
+    "specialInstructions": [
+      "Be prepared for physically challenging terrain and moderate altitude",
+      "Pack appropriate trekking gear for varying weather conditions",
+      "Follow the designated trails and respect the environment"
+    ]
+  }
+]
