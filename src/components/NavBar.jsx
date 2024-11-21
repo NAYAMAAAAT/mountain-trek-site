@@ -2,76 +2,78 @@ import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from './AuthProvider';
 
-
-
 const NavBar = () => {
+    const { user, signOutUser  } = useContext(AuthContext);
 
+    const handleSignOut = () => {
+        signOutUser ()
+            .then(() => {
+                // console.log('User  signed out successfully');
+            })
+            .catch(error => console.log('ERROR', error.message));
+    };
 
+    const links = (
+        <>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/login">Login</NavLink></li>
+            <li><NavLink to="/register">Register</NavLink></li>
+            {user && (
+                <>
+                    <li><NavLink to="/profile">Update Profile</NavLink></li>
+                    <li><NavLink to="/info">Information</NavLink></li>
+                    <li><NavLink to="/myprofile">My Profile</NavLink></li>
+                </>
+            )}
+        </>
+    );
 
-  const { user, signOutUser } = useContext(AuthContext);
-  console.log(user);
-  const handleSignOut = () => {
-      signOutUser()
-          .then(() => {
-              console.log('user sign out successfully')
-          })
-          .catch(error => console.log('ERROR', error.message))
-  }
-
-
-
-
-  const links = <>
-  <li><NavLink to="/">Home</NavLink></li>
-  <li><NavLink to="/login">Login</NavLink></li>
-  <li><NavLink to="/register">Register</NavLink></li>
-  {
-      user && <>
-   
-          <li><NavLink to="/profile">Update Profile</NavLink></li>
-          <li><NavLink to="/info">Information</NavLink></li>
-          <li><NavLink to="/myprofile">My Profile</NavLink></li>
-      </>
-  }
-
-</>
-
-
-
+    const toggleMenu = () => {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    };
 
     return (
         <div className="navbar bg-base-100">
-  <div className="navbar-start">
-    <div>
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-        
-      </div>
-      
-    </div>
-    <a className="btn btn-ghost text-xl">Mountain treks</a>
-  </div>
-  <div className="navbar-center hidden lg:flex">
+            <div className="navbar-start">
+                <div>
+                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden" onClick={toggleMenu}>
+                        {/* Hamburger Icon */}
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </div>
+                </div>
+                <Link to="/" className="btn btn-ghost text-xl">Mountain Treks</Link>
+            </div>
+            <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {links}
                 </ul>
             </div>
             <div className="navbar-end">
-                
-                {
-                    user ?
-                        <>
-                            <span>{user.email}</span>
-                            
-                            <img className='w-12' src={user.photoURL} alt="" /> 
+                {user ? (
+                    <>
+                        <img className='w-12 rounded-full ml-2' src={user.photoURL} alt="User " />
+                        <button onClick={handleSignOut} className='btn bg-emerald-500 ml-2'>Sign Out</button>
+                    </>
+                ) : (
+                    <Link to="/login" className='btn bg-emerald-500'>Login</Link>
+                )}
+            </div>
+
+            {/* Mobile Menu */}
+            <div id="mobile-menu" className="navbar-center lg:hidden hidden mt-2">
+                <ul className="menu menu-vertical px-1">
+                    {links}
+                    {user && (
+                        <li>
                             <a onClick={handleSignOut} className='btn bg-emerald-500'>Sign Out</a>
-                        </>
-                        :
-                        <Link to="/login"> </Link>
-                }
+                        </li>
+                    )}
+                </ul>
             </div>
         </div>
-  
-
     );
 };
 

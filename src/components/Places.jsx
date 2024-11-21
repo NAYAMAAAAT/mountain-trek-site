@@ -5,7 +5,7 @@ import Place from "./Place";
 const Places = () => {
     const [places,setPlaces] = useState([]);
     useEffect(()=>{
-        fetch('/public/placeData.json')
+        fetch('../../public/placeData.json')
         .then(res=>res.json())
         .then(data=> setPlaces(data))
 
