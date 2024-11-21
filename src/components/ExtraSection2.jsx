@@ -1,8 +1,9 @@
-import React from 'react';
 
+import "animate.css/animate.min.css";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 const ExtraSection2 = () => {
     return (
-      
+      <AnimationOnScroll animateIn="animate__bounceIn">
         <section class="bg-slate-400 px-4 py-12 md:py-24">
         <div class="max-w-screen-xl mx-auto">
           <h2 class="font-black text-black text-center text-3xl leading-none uppercase max-w-2xl mx-auto mb-12">What Listeners
@@ -83,7 +84,7 @@ const ExtraSection2 = () => {
           </div>
         </div>
       </section>
-
+      </AnimationOnScroll>
     );
 };
 

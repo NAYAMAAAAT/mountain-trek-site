@@ -1,48 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import { sendPasswordResetEmail } from 'firebase/auth';
-import { auth } from './firebase';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
 
-const ForgotPassword = () => {
-  const [email, setEmail] = useState('');
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    // Pre-fill email if available in localStorage
-    const storedEmail = localStorage.getItem('emailForReset');
-    if (storedEmail) {
-      setEmail(storedEmail);
-    }
-  }, []);
-
-  const handleResetPassword = async (e) => {
-    e.preventDefault();
-    try {
-      await sendPasswordResetEmail(auth, email);
-      alert('Password reset email sent! Please check your email.');
-      // Redirect to Gmail
-      window.location.href = 'https://mail.google.com';
-    } catch (error) {
-      console.error('Error sending password reset email:', error);
-      alert('Failed to send password reset email. Please try again.');
-    }
-  };
-
-  return (
-    <div>
-      <h1>Forgot Password</h1>
-      <form onSubmit={handleResetPassword} className='forgot-password-form'>
-        <input
-          type="email"
-          placeholder="Your Email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <button type="submit" className='reset-button'>Reset Password</button>
-      </form>
-    </div>
-  );
+const Forgot = () => {
+    return (
+        <div class="flex items-center justify-center min-h-screen bg-gray-100">  
+        <div class="bg-white shadow-md rounded p-8 max-w-sm w-full">  
+            <h2 class="text-lg font-semibold mb-5">Reset Password</h2>  
+            <form>  
+                <label class="block mb-2 text-sm font-medium text-gray-600" for="email">Enter your email address to receive a password reset link.</label>  
+                <input type="email" id="email" name="email" class="block w-full p-2 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required />  
+                <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Send Reset Link</button>  
+            </form>  
+        </div>  
+    </div>  
+    );
 };
 
-export default ForgotPassword;
+export default Forgot;
+
+
+
+
+
+
+
+

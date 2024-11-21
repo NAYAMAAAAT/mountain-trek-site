@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from './AuthProvider';
 
+import { ToastContainer, toast } from 'react-toastify';
 
 const Register = () => {
     const navigate = useNavigate();
@@ -28,12 +29,28 @@ const Register = () => {
             })
 
     }
+
+
+
+    const notify = () => {
+      
+        toast.warn("To set a password, it must contain at least one uppercase letter, one lowercase letter, and be a minimum of six characters long. !", {
+          position: "top-center"
+        });
+
+    }
+
+
+
    
     return (
+        
         <div className="hero bg-base-200 min-h-screen">
+           
             <div className="hero-content flex-col">
                 <div className="text-center lg:text-left">
                     <h1 className="text-2xl font-bold">Register now!</h1>
+                   
                 </div>
                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                     <form onSubmit={handleRegister} className="card-body">
@@ -57,15 +74,21 @@ const Register = () => {
 
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Register</button>
+                            <button  onClick={notify} className="btn btn-primary">Register</button>
+                            <ToastContainer />
                         </div>
+                      
                     </form>
+                    
                     <p className='ml-4 mb-4 mr-4'>
                         Already have an account? Please <Link to="/login" className='text-blue-500'>Login</Link>.
                     </p>
-                    
+                   
                 </div>
             </div>
+            
+                      
+                 
         </div>
     );
 };

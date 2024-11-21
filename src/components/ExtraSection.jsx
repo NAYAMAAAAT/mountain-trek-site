@@ -1,7 +1,10 @@
 
-
+import "animate.css/animate.min.css";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 const ExtraSection = () => {
     return (
+        <AnimationOnScroll animateIn="animate__bounceIn">
+        <main class="animate__animated animate__fadeInLeft">
         <div class="md:mx-auto md:container px-4 dark:bg-gray-900">
         <div class="pt-10 md:pt-40">
             <div class="container mx-auto">
@@ -24,6 +27,7 @@ const ExtraSection = () => {
                                 Explore, Learn, and Connect with the Natural World
     
     </h2>
+
     
                     
                             </div>
@@ -35,6 +39,8 @@ const ExtraSection = () => {
         </div>
     
     </div>
+    </main>
+    </AnimationOnScroll>
     );
 };
 

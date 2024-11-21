@@ -28,7 +28,9 @@ const NavBar = () => {
   {
       user && <>
    
-          <li><NavLink to="/profile">Profile</NavLink></li>
+          <li><NavLink to="/profile">Update Profile</NavLink></li>
+          <li><NavLink to="/info">Information</NavLink></li>
+          <li><NavLink to="/myprofile">My Profile</NavLink></li>
       </>
   }
 
@@ -54,20 +56,21 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">{name}</a>
+                
                 {
                     user ?
                         <>
                             <span>{user.email}</span>
-                            <a onClick={handleSignOut} className='btn'>Sign Out</a>
+                            
+                            <img className='w-12' src={user.photoURL} alt="" /> 
+                            <a onClick={handleSignOut} className='btn bg-emerald-500'>Sign Out</a>
                         </>
                         :
-                        <Link to="/login">Login </Link>
+                        <Link to="/login"> </Link>
                 }
             </div>
         </div>
- 
-
+  
 
     );
 };
