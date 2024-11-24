@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       {
         path:'places/:id',
         element:<Details></Details>,
-        loader:()=> fetch('../public/placeData.json')
+        loader:()=> fetch('./placeData.json')
       },
       {
         path:'login',

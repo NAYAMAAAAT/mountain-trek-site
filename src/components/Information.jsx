@@ -14,7 +14,7 @@ const Information = () => {
             <button class="text-lg md:text-2xl text-white  px-5 mt-10"><TalkWithExpert></TalkWithExpert></button>
         </div>
         <div class="order-1 lg:order-2">
-            <img class="h-80 w-80 object-cover lg:w-[500px] lg:h-[500px]" src="https://container-news.com/wp-content/uploads/2021/04/Picture-1.jpg" alt=""/>
+            <img class="h-80 w-80 object-cover lg:w-[500px] lg:h-[500px]" src="https://thumbs.dreamstime.com/b/young-asian-man-travel-backpacking-outdoor-portrait-56093732.jpg" alt=""/>
         </div>
     </div>
 </section>

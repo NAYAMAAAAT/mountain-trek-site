@@ -1,14 +1,16 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from './AuthProvider';
 
 const NavBar = () => {
     const { user, signOutUser  } = useContext(AuthContext);
+    const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage mobile menu visibility
 
     const handleSignOut = () => {
+        
         signOutUser ()
             .then(() => {
-                // console.log('User  signed out successfully');
+                
             })
             .catch(error => console.log('ERROR', error.message));
     };
@@ -29,12 +31,11 @@ const NavBar = () => {
     );
 
     const toggleMenu = () => {
-        const menu = document.getElementById('mobile-menu');
-        menu.classList.toggle('hidden');
+        setIsMenuOpen(!isMenuOpen); // Toggle the menu visibility
     };
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 relative">
             <div className="navbar-start">
                 <div>
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden" onClick={toggleMenu}>
@@ -44,7 +45,7 @@ const NavBar = () => {
                         </svg>
                     </div>
                 </div>
-                <Link to="/" className="btn btn-ghost text-xl">Mountain Treks</Link>
+                <Link to="/" className="btn btn-ghost text-xl">MountainTour</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -54,25 +55,29 @@ const NavBar = () => {
             <div className="navbar-end">
                 {user ? (
                     <>
-                        <img className='w-12 rounded-full ml-2' src={user.photoURL} alt="User " />
+                        <img className='w-12 rounded-full ml-2' src={user.photoURL} alt="User  " />
                         <button onClick={handleSignOut} className='btn bg-emerald-500 ml-2'>Sign Out</button>
+                        
                     </>
                 ) : (
-                    <Link to="/login" className='btn bg-emerald-500'>Login</Link>
+                    <Link to="/login" className='btn bg-emerald-500 '>Login</Link>
+                    
                 )}
             </div>
 
             {/* Mobile Menu */}
-            <div id="mobile-menu" className="navbar-center lg:hidden hidden mt-2">
-                <ul className="menu menu-vertical px-1">
-                    {links}
-                    {user && (
-                        <li>
-                            <a onClick={handleSignOut} className='btn bg-emerald-500'>Sign Out</a>
-                        </li>
-                    )}
-                </ul>
-            </div>
+            {isMenuOpen && (
+                <div id="mobile-menu" className="navbar-center lg:hidden mt-2 ml-16 absolute z-10 bg-white shadow-lg">
+                    <ul className="menu menu-vertical px-1 mt-28"> {/* Added mt-2 for margin top */}
+                        {links}
+                        {user && (
+                            <li>
+                                <a onClick={handleSignOut} className='btn bg-emerald-500 '>Sign Out</a>
+                            </li>
+                        )}
+                    </ul>
+                </div>
+            )}
         </div>
     );
 };
