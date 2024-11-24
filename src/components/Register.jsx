@@ -1,9 +1,9 @@
-import React, { useContext, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { AuthContext } from './AuthProvider';
+import React, {  useState } from 'react';
+import { Link} from 'react-router-dom';
+
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { ToastContainer, toast } from 'react-toastify';
-import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
+
+import { createUserWithEmailAndPassword,  sendEmailVerification, updateProfile } from 'firebase/auth';
 import { auth } from '../firebase';
 
 
@@ -75,9 +75,9 @@ const Register = () => {
             })
 
     }
+
    
     return (
-        
         <div className="card bg-base-100 mx-auto w-full max-w-sm shrink-0 shadow-2xl">
         <h3 className="text-3xl ml-4 font-bold">Sign Up now!</h3>
         <form onSubmit={handleSignUp} className="card-body">
