@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "boi-poka-project"
-  }
+    "default": "boi-poka-project",
+    "dist": "boi-poka-project"
+  },
+  "targets": {},
+  "etags": {}
 }
