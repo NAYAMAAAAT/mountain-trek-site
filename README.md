@@ -23,5 +23,4 @@
   - **Node.js**: For server-side logic (if applicable).
   - **Express.js**: For routing and API creation (if applicable).
 
-## Live Demo:
-mountain-trek-site.netlify.app
+## Live Demo: https://mountain-trek-site.netlify.app/
